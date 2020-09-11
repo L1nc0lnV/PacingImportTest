@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[MasterBudgetSourcePivotIBA] (
+    [rId]                     INT             IDENTITY (1, 1) NOT NULL,
+    [AssociateIDTactic]       NVARCHAR (255)  NULL,
+    [TargetDemo]              NVARCHAR (255)  NULL,
+    [AssociateID]             NVARCHAR (255)  NULL,
+    [AgentFirstName]          NVARCHAR (255)  NULL,
+    [AgentLastName]           NVARCHAR (255)  NULL,
+    [TerminationDate]         DATETIME        NULL,
+    [AgentType]               NVARCHAR (255)  NULL,
+    [RegionalBillingCode]     NVARCHAR (255)  NULL,
+    [Tactic]                  NVARCHAR (255)  NULL,
+    [SelectedProduct]         NVARCHAR (255)  NULL,
+    [Months]                  NVARCHAR (100)  NULL,
+    [SumOfOriginalBudget]     DECIMAL (18, 2) NULL,
+    [SumOfFinalBudget]        DECIMAL (18, 2) NULL,
+    [SumOfAdServingBudget]    DECIMAL (18, 2) NULL,
+    [SumOfBrandSafetyBudget]  DECIMAL (18, 2) NULL,
+    [SumOfBrandSafetyCostDV]  DECIMAL (18, 2) NULL,
+    [SumOfBrandSafetyCostIAS] DECIMAL (18, 2) NULL,
+    [SumOfSbmsBudget]         DECIMAL (18, 2) NULL,
+    [PaymentDeactivationDate] DATETIME        NULL,
+    [CreatedOn]               DATETIME        NOT NULL,
+    [CreatedBy]               NVARCHAR (100)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([rId] ASC)
+);
+

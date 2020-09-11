@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PacingTest</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{8cdb5bb2-3cc4-4d09-b237-81da0b268c93}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>PacingTest</RootNamespace>
+    <AssemblyName>PacingTest</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MedManAsianIba.sql" />
+    <Build Include="dbo\Tables\MedManAutoTargeting.sql" />
+    <Build Include="dbo\Tables\MasterBudgetSourcePivotIBA.sql" />
+    <Build Include="dbo\Tables\MedManBroadcast.sql" />
+    <Build Include="dbo\Tables\MasterBudgetSourcePivotMobile.sql" />
+    <Build Include="dbo\Tables\MedManCinema.sql" />
+    <Build Include="dbo\Tables\MasterRadiusSource.sql" />
+    <Build Include="dbo\Tables\MedManDisplayAdvertising.sql" />
+    <Build Include="dbo\Tables\MedManGasStationTV.sql" />
+    <Build Include="dbo\Tables\MedManHispIba.sql" />
+    <Build Include="dbo\Tables\MedManHispStreamingAudio.sql" />
+    <Build Include="dbo\Tables\MedManHomeowners.sql" />
+    <Build Include="dbo\Tables\MedManNewspaper.sql" />
+    <Build Include="dbo\Tables\MedManOnlineVideoAds.sql" />
+    <Build Include="dbo\Tables\MedManOutdoor.sql" />
+    <Build Include="dbo\Tables\MedManPlaceBased.sql" />
+    <Build Include="dbo\Tables\MedManSocialMedia.sql" />
+    <Build Include="dbo\Tables\MedManStreamingAudio.sql" />
+    <Build Include="dbo\Tables\MedManTelemundo.sql" />
+    <Build Include="dbo\Tables\MedManUnivision.sql" />
+    <Build Include="dbo\Tables\PacingMonthly.sql" />
+    <Build Include="dbo\Tables\PacingTotal.sql" />
+    <Build Include="dbo\Tables\PacingPerformanceAttributes.sql" />
+    <Build Include="dbo\Tables\MasterAgentSource.sql" />
+    <Build Include="dbo\Tables\MasterBudgetSource.sql" />
+    <Build Include="dbo\Tables\MasterBudgetSourcePivotSocialMedia.sql" />
+    <Build Include="dbo\Views\View_TotalPerformance.sql" />
+    <Build Include="Security\butlertillmedia_mschwartz.sql" />
+    <Build Include="Security\butlertillmedia_mschwartz_1.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_AnalyticsSQLAuto.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_AnalyticsSQLAuto_1.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_pwillome.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_pwillome_1.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_msteele.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_msteele_1.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_pcronin.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_pcronin_1.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_svc.pacing.sql" />
+    <Build Include="Security\BUTLERTILLMEDIA_svc_1.pacing.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Cinema.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_AutoTargeting.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_DisplayAdvertising.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_GasStationTV.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Homeowners.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Newspaper.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Outdoor.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_PlaceBased.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Univision.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_HispStreamingAudio.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_SocialMedia.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_StreamingAudio.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_HispIba.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_OnlineVideoAds.sql" />
+    <Build Include="dbo\Stored Procedures\usp_dev_cleanup.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_AutoTrader.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_AsianIBA.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_FacebookNF.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Telemundo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Broadcast.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_MonthlyTotal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Pacing_Total.sql" />
+  </ItemGroup>
+</Project>
