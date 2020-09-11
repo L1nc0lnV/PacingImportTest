@@ -66,6 +66,7 @@
     [CALicense]                    NVARCHAR (255) NULL,
     [CreatedOn]                    DATETIME       NOT NULL,
     [CreatedBy]                    VARCHAR (255)  NOT NULL,
+	[Jaytest]					   INT NOT null
     CONSTRAINT [PK_dbo.MasterAgentSources] PRIMARY KEY CLUSTERED ([rID] ASC)
 );
 
